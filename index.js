@@ -4,7 +4,9 @@ const path = require('path');
 module.exports = {
     name: "IA de Respostas DNT",
     init: (bot) => {
-        const brainPath = path.join(process.cwd(), 'brain.json');
+        // Isso vai buscar o arquivo na mesma pasta que este index.js está!
+const brainPath = path.join(__dirname, 'brain.json'); 
+        
 
         bot.command({
             name: 'perguntar',
